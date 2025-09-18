@@ -1,51 +1,49 @@
-🤖 Prep AI
-Your Personal AI Interview Coach
+🤖 Prep AI:Your personal interview coach
+Ace Your Next Behavioral Interview.
 
-Prep AI is a web-based application designed to help users practice for behavioral interviews by providing AI-generated questions and constructive feedback. Built for a fast-paced hackathon, this tool leverages the power of Google's Gemini API to create a realistic and helpful interview preparation experience.
+Let's be real, behavioral interviews can be tough. It's hard to practice for those "tell me about a time when..." questions without feeling repetitive. I built Prep AI during a hackathon to scratch my own itch: a simple tool for realistic practice and instant, honest feedback. It uses the Google Gemini API to make sure you're always on your toes.
 
-✨ Features
-🤖 AI-Generated Questions: Get unique, high-quality behavioral interview questions on demand.
+✨ What it Does
+Unlimited, Realistic Questions: No more stale, predictable questions from a list. Get a fresh behavioral prompt every time you click 'Next'.
 
-💡 Instant Feedback: Submit your answers and receive an immediate, concise summary of your performance.
+Feedback That Actually Helps: Get a quick summary of what you did well and where you can improve. No fluff, just actionable advice.
 
-📊 Detailed Analysis: Option to get in-depth feedback based on the STAR (Situation, Task, Action, Result) method.
+Deep Dive with the STAR Method: Want to know why the feedback says what it does? Get a detailed breakdown of your answer based on the industry-standard STAR framework.
 
-📱 Responsive Design: A clean, modern, and fully responsive layout that works on both desktop and mobile.
+Clean, Focused UI: A simple, modern interface that works great on any device, because your focus should be on practicing, not fighting the layout.
 
-🌗 Smart Theming: Automatically detects your system's preferred theme (light/dark) and allows you to toggle between them.
+Light & Dark Modes: Automatically syncs with your system theme, with a toggle if you feel like a change.
 
-🎬 Interactive Experience: UI elements like text streaming and smart button states create a smooth, app-like feel.
+🚀 Built With
+🛠️ How to Run It
+Want to fire this up locally? It couldn't be easier:
 
-🚀 Tech Stack
-🛠️ Getting Started
-To run this project locally, follow these simple steps:
+Clone this repo or just download the three main files.
 
-Clone the repository (or download the files).
+Toss index.html, style.css, and script.js into the same folder.
 
-Place the files index.html, style.css, and script.js in the same folder.
+Open index.html in your browser.
 
-Open index.html in your favorite web browser.
+That's all. No installers, no build steps, no nonsense.
 
-That's it! The application is fully self-contained and requires no build steps or installations.
+⚙️ How It Works (The Guts)
+Prep AI is a simple frontend that talks to the Google Gemini API. Here’s the play-by-play:
 
-⚙️ How It Works
-The user clicks "Start Interview" to initiate the process.
+When you ask for a question, the app pings the API with a carefully tuned prompt to get a good behavioral question.
 
-A call is made to the Gemini API to fetch a behavioral question. The prompt is engineered to request concise, plain-text questions.
+You type your answer and hit submit.
 
-The user types their answer into the text area.
+The app sends your answer and the original question back to the API, but this time it tells the AI to act as a critical but fair interview coach.
 
-Upon submitting, the user's answer and the original question are sent back to the Gemini API with a system prompt that instructs the AI to act as an interview coach and provide feedback.
+The AI's feedback streams back to the screen. I also built in a retry-logic in case the API is having a busy day.
 
-The initial feedback is displayed, and an option for more detailed, STAR-based feedback becomes available.
+🔮 What's Next?
+This was built in a very short timespan, so there's plenty more that could be done. Here are a few ideas floating around:
 
-The entire user flow is managed with robust error handling, including an exponential backoff strategy to handle temporary API overloads.
+Session History: It'd be cool to see a log of your past answers and track your improvement over time.
 
-🔮 Future Improvements
-[1] Session History: Store past questions and feedback for users to review.
+Question Categories: Let users focus on specific skills like "Leadership," "Teamwork," or "Conflict Resolution."
 
-[2] Question Categories: Allow users to select specific types of questions (e.g., Leadership, Teamwork).
+Voice Mode: Re-implement speech-to-text so you can practice your answers by speaking them, which is way more realistic.
 
-[3] Voice-to-Text: Re-implement speech recognition for a hands-free experience.
-
-[4] User Accounts: Add user authentication to save progress across devices.
+User Accounts: Maybe add a simple login to save your session history.
